@@ -1,0 +1,43 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Données brutes locales (garder la structure, pas les vidéos lourdes)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+# Autoriser le modèle de métadonnées
+!data/metadata.csv
+!data/README.md
+
+# Flutter / Dart
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/.packages
+app/build/
+app/.pub-cache/
+app/.pub/
+app/**/*.iml
+app/**/Generated.xcconfig
+app/**/flutter_export_environment.sh
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.pem
+google-services.json
+GoogleService-Info.plist

@@ -1,0 +1,11 @@
+# Phase 0 — validation PPG (Python)
+numpy>=1.24
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.7
+jupyter>=1.0
+# Choisir l’une des deux pour le traitement cardiaque (à confirmer en T0-2+)
+heartpy>=1.2
+# neurokit2>=0.2
+# Lecture vidéo (optionnel tant qu’on n’a que des CSV)
+opencv-python-headless>=4.8

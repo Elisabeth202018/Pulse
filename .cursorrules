@@ -1,0 +1,26 @@
+# Projet Pulse — règles pour Cursor
+
+## Avant d'écrire du code
+1. Résume en quelques lignes ta compréhension du projet et de la tâche demandée.
+2. Liste les hypothèses et pose les questions bloquantes.
+3. Propose un plan court, puis code **une seule tâche** du backlog (docs/CAHIER_DES_CHARGES.md, section 14).
+
+## Règles permanentes
+- Ce n'est **pas** un dispositif médical. Aucun texte utilisateur ne doit poser un diagnostic, prédire une maladie ou rassurer de façon absolue (formulations interdites, section 9.3).
+- Tous les seuils (bpm, SQI, délais, filtres) sont des **constantes de configuration**, jamais en dur dans la logique (`config.py` / `ppg_config.dart`).
+- Ne jamais afficher un bpm issu d'un signal de qualité insuffisante (SQI < SQI_MIN).
+- Données sur le téléphone par défaut. Pas de serveur, pas d'envoi réseau dans le MVP.
+- Ne pas ajouter de dépendance lourde sans justification et confirmation.
+- Ne pas supprimer de fichiers existants sans demander.
+- Expliquer brièvement les choix importants ; commentaires simples ; solutions lisibles plutôt que sophistiquées.
+- Noms de code en anglais ; textes affichés via fichiers de traduction (français d'abord).
+- Un commit Git par tâche terminée, message court et clair.
+- Pas de clé secrète ni de donnée personnelle dans le dépôt.
+
+## Couleurs UI
+- Palette bleue pour l'interface ; vert / orange / rouge **uniquement** pour l'indicateur de suivi.
+- Couleurs définies dans `app/lib/core/theme/app_colors.dart` uniquement (phase 1).
+
+## Stack
+- Phase 0 : Python + Jupyter (notebooks/).
+- Phase 1 : Flutter (app/), SQLite local. Kivy est hors scope.
