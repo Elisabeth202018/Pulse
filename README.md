@@ -37,13 +37,14 @@ Détail : voir [`docs/CAHIER_DES_CHARGES.md`](docs/CAHIER_DES_CHARGES.md).
 ## Démarrage rapide (phase 0)
 
 ```bash
-python3 -m venv .venv
+python3 -m venv --system-site-packages .venv   # réutilise numpy système si présent
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements.txt                # peut être lent selon le réseau
+python scripts/verify_t0_2.py                  # contrôle rapide T0-2 (numpy suffit)
 jupyter lab   # ou l’extension Jupyter dans Cursor
 ```
 
-Les notebooks attendront des fichiers dans `data/raw/` (CSV `timestamp_ms,mean_r,mean_g,mean_b` ou vidéos). En attendant la collecte réelle, on utilisera des fixtures dans `tests/fixtures/`.
+Les notebooks lisent `data/raw/` ou, pour l’instant, `tests/fixtures/sample_ppg_signal.csv`.
 
 ## Confidentialité
 

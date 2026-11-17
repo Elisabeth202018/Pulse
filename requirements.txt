@@ -1,10 +1,12 @@
 # Phase 0 — validation PPG (Python)
+# Minimal pour T0-2 (CSV + courbe SVG) : numpy
 numpy>=1.24
+# Recommandé ensuite (T0-3+)
 scipy>=1.11
 pandas>=2.0
 matplotlib>=3.7
 jupyter>=1.0
-# Choisir l’une des deux pour le traitement cardiaque (à confirmer en T0-2+)
+# Traitement cardiaque (T0-4+, à confirmer)
 heartpy>=1.2
 # neurokit2>=0.2
 # Lecture vidéo (optionnel tant qu’on n’a que des CSV)
